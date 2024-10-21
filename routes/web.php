@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // Variabile
+    $text = 'Laravel: Hello World!';
+    // Struttura dati
+    $list = ['Item 01', 'Item 02', 'Item 03'];
+
+    return view('home', compact('text', 'list'));
 });
